@@ -1,0 +1,4742 @@
+/* ==========================================
+   RESET
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    font-family: "Poppins", sans-serif;
+
+    background: #f7f6ef;
+
+    color: #2d332e;
+
+    overflow-x: hidden;
+}
+
+
+/* ==========================================
+   OPENING
+========================================== */
+
+.opening {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 100svh;
+
+    min-height: 650px;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #71816f;
+}
+
+
+/* ==========================================
+   COLLAGE
+========================================== */
+
+.collage {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image: url("assets/collage.jpg");
+
+    background-size: cover;
+
+    background-position: center center;
+
+    background-repeat: no-repeat;
+
+    transform: scale(1.03);
+
+    animation: gentleZoom 12s ease-in-out infinite alternate;
+
+}
+
+
+/* Gentle movement */
+
+@keyframes gentleZoom {
+
+    from {
+        transform: scale(1.03);
+    }
+
+    to {
+        transform: scale(1.08);
+    }
+
+}
+
+
+/* ==========================================
+   SOFT SAGE OVERLAY
+========================================== */
+.soft-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    background: rgba(220, 232, 220, 0.38);
+}
+
+
+
+/* ==========================================
+   SOFT CENTER GLOW
+========================================== */
+.opening::after {
+    content: none;
+}
+
+/* ==========================================
+   DECORATIVE ELEMENTS
+========================================== */
+
+.decor {
+
+    position: absolute;
+
+    z-index: 3;
+
+    color: rgba(255, 246, 215, 0.85);
+
+    pointer-events: none;
+
+    animation: floatDecor 4s ease-in-out infinite;
+}
+
+
+.decor-one {
+
+    top: 18%;
+
+    left: 8%;
+
+    font-size: 15px;
+
+}
+
+
+.decor-two {
+
+    top: 30%;
+
+    right: 9%;
+
+    font-size: 12px;
+
+    animation-delay: 1s;
+
+}
+
+
+.decor-three {
+
+    bottom: 25%;
+
+    left: 13%;
+
+    font-size: 14px;
+
+    animation-delay: 2s;
+
+}
+
+
+.decor-four {
+
+    bottom: 18%;
+
+    right: 12%;
+
+    font-size: 15px;
+
+    animation-delay: 0.5s;
+
+}
+
+
+@keyframes floatDecor {
+
+    0%,
+    100% {
+
+        transform: translateY(0);
+
+        opacity: 0.55;
+
+    }
+
+    50% {
+
+        transform: translateY(-8px);
+
+        opacity: 1;
+
+    }
+
+}
+
+
+/* ==========================================
+   OPENING CONTENT
+========================================== */
+.opening-content {
+    position: relative;
+    z-index: 5;
+
+    width: min(88%, 600px);
+
+    text-align: center;
+
+    color: #354a3b;
+
+    padding: 25px 18px;
+
+    background: transparent;
+
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+
+    box-shadow: none;
+
+    animation: revealContent 1.4s ease forwards;
+}
+
+
+@keyframes revealContent {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(25px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* ==========================================
+   TOP DECORATION
+========================================== */
+
+.top-decoration {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.top-decoration span {
+
+    width: 48px;
+
+    height: 1px;
+
+    background: #d9c487;
+
+}
+
+
+.top-decoration i {
+
+    color: #e3cd91;
+
+    font-size: 13px;
+
+    font-style: normal;
+
+}
+
+
+/* ==========================================
+   SMALL INTRO
+========================================== */
+
+.little-message {
+
+    font-family: "Allura", cursive;
+
+    font-size: 25px;
+
+    color: #565607;
+
+    margin-bottom: 2px;
+
+}
+
+
+/* ==========================================
+   MAIN HEADING
+========================================== */
+
+.opening-content h1 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(52px, 13vw, 88px);
+
+    line-height: 0.85;
+
+    font-weight: 500;
+
+    letter-spacing: -1px;
+
+    color: #354a3b;
+
+    text-shadow:
+
+        0 3px 18px rgba(0, 0, 0, 0.35);
+
+}
+
+
+.opening-content h1 span {
+
+    display: block;
+
+    color: #562c07;
+
+    font-style: italic;
+
+    margin-top: 5px;
+
+}
+
+
+/* ==========================================
+   TEACHER'S DAY
+========================================== */
+
+.teacher-day {
+
+    margin-top: 18px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(28px, 6vw, 40px), bold;
+
+    font-weight: 600;
+
+    color: #3f5142;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* ==========================================
+   GOLD LINE
+========================================== */
+
+.gold-line {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin: 14px auto;
+
+}
+
+
+.gold-line span {
+
+    width: 42px;
+
+    height: 1px;
+
+    background: #d7bd70;
+
+}
+
+
+.gold-line i {
+
+    font-size: 14px;
+
+    color: #e2ca83;
+
+    font-style: normal;
+
+}
+
+
+/* ==========================================
+   DEPARTMENT
+========================================== */
+
+.department {
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    letter-spacing: 4px;
+
+    color: #354a3b;
+
+    margin-top: 10px;
+
+}
+
+
+.college {
+
+    margin-top: 7px;
+
+    font-size: 9px;
+
+    line-height: 1.6;
+
+    letter-spacing: 2px;
+
+    color: #46564a;
+
+}
+
+
+/* ==========================================
+   WISH
+========================================== */
+
+.opening-wish {
+
+    margin-top: 22px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(19px, 4.5vw, 25px);
+
+    line-height: 1.25;
+
+    font-style: italic;
+
+    color: #3f5142;
+
+}
+
+
+/* ==========================================
+   CONTINUE BUTTON
+========================================== */
+
+.continue-button {
+
+    margin-top: 28px;
+
+    padding: 12px 22px;
+
+    min-width: 190px;
+
+    border-radius: 50px;
+
+    border: 1px solid rgba(224, 199, 128, 0.85);
+
+    background: rgba(46, 66, 53, 0.48);
+
+    backdrop-filter: blur(8px);
+
+    color: #f7e8b8;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 400;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: all 0.35s ease;
+
+    animation: gentlePulse 2.5s ease-in-out infinite;
+
+}
+
+
+.continue-button span {
+
+    margin-right: 10px;
+
+}
+
+
+.continue-button i {
+
+    font-size: 14px;
+
+    font-style: normal;
+
+}
+
+
+.continue-button:hover {
+
+    transform: translateY(-3px);
+
+    background: rgba(10, 28, 17, 0.72);
+
+    box-shadow:
+
+        0 8px 25px rgba(216, 190, 115, 0.25);
+
+}
+
+
+@keyframes gentlePulse {
+
+    0%,
+    100% {
+
+        box-shadow:
+            0 0 0 rgba(216, 190, 115, 0);
+
+    }
+
+    50% {
+
+        box-shadow:
+            0 0 20px rgba(216, 190, 115, 0.20);
+
+    }
+
+}
+
+
+/* ==========================================
+   NEXT SECTION
+========================================== */
+
+.next-section {
+
+    min-height: 100vh;
+
+    padding: 100px 7%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background: #f7f6ef;
+
+}
+
+
+.section-label {
+
+    color: #71816f;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.next-section h2 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(40px, 9vw, 65px);
+
+    font-weight: 600;
+
+    color: #3f5142;
+
+}
+
+
+.next-section p {
+
+    margin-top: 15px;
+
+    color: #71816f;
+
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+    .soft-overlay {
+            background:
+                radial-gradient(ellipse 90% 42% at 50% 50%,
+                    rgba(247, 246, 239, 0.96) 0%,
+                    rgba(242, 244, 236, 0.84) 22%,
+                    rgba(226, 234, 222, 0.64) 42%,
+                    rgba(190, 207, 191, 0.28) 60%,
+                    rgba(40, 57, 45, 0.10) 78%,
+                    rgba(10, 10, 10, 0.32) 100%);
+        }
+
+    .opening {
+
+        min-height: 100svh;
+
+    }
+
+
+        .opening-content {
+            width: 92%;
+            padding: 15px 8px;
+    
+            background: transparent;
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+        }
+
+
+    .little-message {
+
+        font-size: 23px;
+
+    }
+
+
+    .opening-content h1 {
+
+        font-size: 55px;
+
+    }
+
+
+    .teacher-day {
+
+        font-size: 29px;
+
+        margin-top: 16px;
+
+    }
+
+
+    .department {
+
+        font-size: 11px;
+
+        letter-spacing: 3px;
+
+    }
+
+
+    .college {
+
+        font-size: 8px;
+
+        letter-spacing: 1.5px;
+
+    }
+
+
+    .opening-wish {
+
+        font-size: 18px;
+
+        margin-top: 18px;
+
+    }
+
+
+    .continue-button {
+
+        margin-top: 23px;
+
+        min-width: 185px;
+
+        padding: 11px 18px;
+
+        font-size: 9px;
+
+    }
+
+
+    .decor-one {
+
+        left: 5%;
+
+        top: 15%;
+
+    }
+
+
+    .decor-two {
+
+        right: 5%;
+
+        top: 27%;
+
+    }
+
+
+    .decor-three {
+
+        left: 7%;
+
+        bottom: 20%;
+
+    }
+
+
+    .decor-four {
+
+        right: 7%;
+
+        bottom: 15%;
+
+    }
+
+}
+
+/* ==========================================
+   GUIDING PILLARS SECTION
+========================================== */
+
+.pillars-section {
+
+    min-height: 100vh;
+
+    padding: 100px 7% 80px;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(220, 210, 170, 0.18),
+            transparent 40%
+        ),
+        #f7f6ef;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* ------------------------------------------
+   HEADING
+------------------------------------------ */
+
+.pillars-heading {
+
+    max-width: 700px;
+
+    margin-bottom: 55px;
+
+    animation: pillarsReveal 1s ease forwards;
+
+}
+
+
+.pillars-label {
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 500;
+
+    letter-spacing: 4px;
+
+    color: #71816f;
+
+    margin-bottom: 14px;
+
+}
+
+
+.pillars-line {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.pillars-line span {
+
+    width: 45px;
+
+    height: 1px;
+
+    background: #d2b86c;
+
+}
+
+
+.pillars-line i {
+
+    font-style: normal;
+
+    font-size: 14px;
+
+    color: #c5a24a;
+
+}
+
+
+.pillars-heading h2 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(45px, 7vw, 72px);
+
+    line-height: 0.9;
+
+    font-weight: 500;
+
+    color: #354a3b;
+
+}
+
+
+.pillars-heading h2 span {
+
+    color: #9b7430;
+
+    font-style: italic;
+
+}
+
+
+.pillars-intro {
+
+    max-width: 540px;
+
+    margin: 25px auto 0;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 20px;
+
+    line-height: 1.4;
+
+    font-style: italic;
+
+    color: #687267;
+
+}
+
+
+/* ------------------------------------------
+   CARD GRID
+------------------------------------------ */
+
+.pillar-grid {
+
+    width: min(1100px, 100%);
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+
+}
+
+
+/* ------------------------------------------
+   CARD
+------------------------------------------ */
+
+.pillar-card {
+
+    min-height: 270px;
+
+    padding: 35px 25px;
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: rgba(255, 255, 255, 0.45);
+
+    border: 1px solid rgba(197, 162, 74, 0.35);
+
+    transition: transform 0.4s ease,
+                box-shadow 0.4s ease,
+                background 0.4s ease;
+
+    overflow: hidden;
+
+}
+
+
+.pillar-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 50%;
+
+    width: 0;
+
+    height: 2px;
+
+    background: #c5a24a;
+
+    transform: translateX(-50%);
+
+    transition: width 0.4s ease;
+
+}
+
+
+.pillar-card:hover {
+
+    transform: translateY(-8px);
+
+    background: rgba(255, 255, 255, 0.72);
+
+    box-shadow:
+        0 18px 40px rgba(53, 74, 59, 0.10);
+
+}
+
+
+.pillar-card:hover::before {
+
+    width: 65%;
+
+}
+
+
+/* ------------------------------------------
+   ICON
+------------------------------------------ */
+
+.pillar-icon {
+
+    width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 18px;
+
+    border: 1px solid rgba(197, 162, 74, 0.55);
+
+    border-radius: 50%;
+
+    color: #b28b3c;
+
+    font-size: 17px;
+
+}
+
+
+/* ------------------------------------------
+   CARD TITLE
+------------------------------------------ */
+
+.pillar-card h3 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 31px;
+
+    font-weight: 600;
+
+    color: #354a3b;
+
+    margin-bottom: 12px;
+
+}
+
+
+/* ------------------------------------------
+   CARD TEXT
+------------------------------------------ */
+
+.pillar-card p {
+
+    max-width: 210px;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 11px;
+
+    line-height: 1.8;
+
+    color: #687267;
+
+}
+
+
+/* ------------------------------------------
+   CARD NUMBER
+------------------------------------------ */
+
+.card-number {
+
+    position: absolute;
+
+    right: 15px;
+
+    bottom: 10px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 13px;
+
+    color: rgba(197, 162, 74, 0.55);
+
+}
+
+
+/* ------------------------------------------
+   ENDING MESSAGE
+------------------------------------------ */
+
+.pillars-ending {
+
+    margin-top: 65px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 18px;
+
+}
+
+
+.ending-line {
+
+    width: 55px;
+
+    height: 1px;
+
+    background: rgba(197, 162, 74, 0.55);
+
+}
+
+
+.pillars-ending p {
+
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 19px;
+
+    line-height: 1.35;
+
+    font-style: italic;
+
+    color: #687267;
+
+}
+
+
+.pillars-ending span {
+
+    color: #354a3b;
+
+    font-weight: 600;
+
+}
+
+
+/* ------------------------------------------
+   ANIMATION
+------------------------------------------ */
+
+@keyframes pillarsReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(25px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+/* ==========================================
+   SMALL HEIGHT PHONES
+========================================== */
+
+@media (max-width: 600px) and (max-height: 700px) {
+
+    .opening-content h1 {
+
+        font-size: 47px;
+
+    }
+
+
+    .little-message {
+
+        font-size: 20px;
+
+    }
+
+
+    .teacher-day {
+
+        font-size: 25px;
+
+    }
+
+
+    .opening-wish {
+
+        font-size: 16px;
+
+        margin-top: 13px;
+
+    }
+
+
+    .continue-button {
+
+        margin-top: 18px;
+
+    }
+
+}
+
+
+
+/* =========================================================
+   OUR GUIDING PILLARS
+   Elegant • Olive • Gold • BCA Tech + Heritage
+   ========================================================= */
+
+
+/* =========================================================
+   MAIN SECTION
+========================================================= */
+
+.guiding-pillars {
+
+    position: relative;
+
+    width: 100%;
+
+    padding: 48px 0 35px;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+    background-color: #eef0e5;
+
+    /* Subtle technical grid */
+    background-image:
+        linear-gradient(rgba(54, 78, 65, 0.055) 1px,
+            transparent 1px),
+        linear-gradient(90deg,
+            rgba(54, 78, 65, 0.055) 1px,
+            transparent 1px);
+
+    background-size: 24px 24px;
+}
+
+
+/* Soft central glow */
+
+.guiding-pillars::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 430px;
+    height: 430px;
+
+    top: -180px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background:
+        radial-gradient(circle,
+            rgba(205, 181, 108, 0.14) 0%,
+            rgba(205, 181, 108, 0.05) 38%,
+            transparent 70%);
+
+    pointer-events: none;
+}
+
+
+/* Decorative corner circle */
+
+.guiding-pillars::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    right: -125px;
+    bottom: -130px;
+
+    border: 1px solid rgba(183, 148, 63, 0.20);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.pillars-heading {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    text-align: center;
+
+    padding: 0 20px;
+
+    box-sizing: border-box;
+
+    margin-bottom: 30px;
+}
+
+
+/* Small uppercase label */
+
+.pillars-label {
+
+    display: block;
+
+    margin-bottom: 9px;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    color: #a17c32;
+}
+
+
+/* Main heading */
+
+.pillars-heading h2 {
+
+    margin: 0;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 42px;
+
+    line-height: 1;
+
+    font-weight: 500;
+
+    color: #304c3e;
+
+    letter-spacing: -0.5px;
+}
+
+
+/* Heading underline */
+
+.pillars-heading h2::after {
+
+    content: "✦";
+
+    display: block;
+
+    margin: 12px auto 8px;
+
+    font-family: Georgia, serif;
+
+    font-size: 15px;
+
+    color: #c19a45;
+}
+
+
+/* Intro text */
+
+.pillars-heading p {
+
+    max-width: 390px;
+
+    margin: 0 auto;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 17px;
+
+    line-height: 1.35;
+
+    font-style: italic;
+
+    color: #68766c;
+}
+
+
+/* =========================================================
+   SWIPE AREA
+========================================================= */
+
+.pillars-slider {
+
+    position: relative;
+
+    z-index: 3;
+
+    display: flex;
+
+    gap: 18px;
+
+    width: 100%;
+
+    padding: 6px 28px 18px;
+
+    box-sizing: border-box;
+
+    overflow-x: auto;
+
+    overflow-y: hidden;
+
+    scroll-snap-type: x mandatory;
+
+    -webkit-overflow-scrolling: touch;
+
+    scrollbar-width: none;
+}
+
+
+.pillars-slider::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.pillar-card {
+
+    position: relative;
+
+    flex: 0 0 285px;
+
+    width: 285px;
+
+    /*
+       FIXED HEIGHT
+       Every card remains exactly the same shape.
+    */
+
+    height: 425px;
+
+    min-height: 425px;
+    max-height: 425px;
+
+    box-sizing: border-box;
+
+    padding: 17px 16px 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    scroll-snap-align: center;
+
+    overflow: hidden;
+
+    border-radius: 24px;
+
+    border: 1px solid rgba(198, 163, 78, 0.85);
+
+    background:
+        linear-gradient(145deg,
+            #536b58 0%,
+            #435f4e 45%,
+            #365645 100%);
+
+    box-shadow:
+        0 15px 30px rgba(35, 61, 48, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.10);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+
+}
+
+
+/* Gold top accent */
+
+.pillar-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 58px;
+    height: 5px;
+
+    border-radius:
+        0 0 10px 10px;
+
+    background: #c8a653;
+}
+
+
+/* Decorative glow */
+
+.pillar-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    top: -100px;
+    right: -95px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle,
+            rgba(221, 194, 117, 0.14),
+            transparent 70%);
+
+    pointer-events: none;
+}
+
+
+/* Hover effect */
+
+.pillar-card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 20px 40px rgba(35, 61, 48, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+
+/* =========================================================
+   PHOTO
+========================================================= */
+
+.pillar-photo {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 184px;
+    height: 184px;
+
+    flex: 0 0 184px;
+
+    margin-bottom: 13px;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    border: 3px solid rgba(244, 237, 215, 0.92);
+
+    background: #d8d5c6;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Image */
+
+.pillar-photo img {
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transition:
+        transform 0.5s ease;
+}
+
+
+/* Slight image zoom */
+
+.pillar-card:hover .pillar-photo img {
+
+    transform: scale(1.04);
+}
+
+
+/* =========================================================
+   INFORMATION AREA
+========================================================= */
+
+.pillar-info {
+
+    position: relative;
+
+    z-index: 4;
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    box-sizing: border-box;
+
+}
+
+
+/* =========================================================
+   DESIGNATION
+========================================================= */
+
+.pillar-role {
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 27px;
+
+    padding: 5px 15px;
+
+    margin-bottom: 8px;
+
+    box-sizing: border-box;
+
+    border-radius: 30px;
+
+    border: 1px solid rgba(207, 174, 84, 0.80);
+
+    background: rgba(198, 164, 75, 0.12);
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 8px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    color: #e3c975;
+}
+
+
+/* =========================================================
+   NAME
+========================================================= */
+
+.pillar-info h3 {
+
+    width: 100%;
+
+    /*
+       This prevents names of different lengths
+       from changing the card structure.
+    */
+
+    min-height: 54px;
+
+    max-height: 58px;
+
+    margin: 0;
+
+    padding: 0 7px;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 21px;
+
+    line-height: 1.12;
+
+    font-weight: 600;
+
+    color: #fff9ea;
+
+    overflow-wrap: break-word;
+
+    word-break: normal;
+}
+
+
+/* =========================================================
+   SMALL GOLD STAR
+========================================================= */
+
+.pillar-divider {
+
+    height: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin: 3px 0 3px;
+
+    font-size: 12px;
+
+    color: #d2af58;
+}
+
+
+/* =========================================================
+   QUOTE
+========================================================= */
+
+.pillar-info p {
+
+    width: 100%;
+
+    min-height: 47px;
+
+    margin: 0;
+
+    padding: 0 9px;
+
+    box-sizing: border-box;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 15px;
+
+    line-height: 1.32;
+
+    font-style: italic;
+
+    color: rgba(248, 244, 229, 0.90);
+}
+
+
+/* =========================================================
+   SWIPE DOTS
+========================================================= */
+
+.pillar-dots {
+
+    position: relative;
+
+    z-index: 4;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    margin-top: 3px;
+}
+
+
+.pillar-dots span {
+
+    display: block;
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #b9bba9;
+
+    transition:
+        width 0.3s ease,
+        background 0.3s ease;
+}
+
+
+.pillar-dots span.active {
+
+    width: 27px;
+
+    border-radius: 20px;
+
+    background: #b89643;
+}
+
+
+/* =========================================================
+   BOTTOM DECORATION
+========================================================= */
+
+.pillars-bottom-decoration {
+
+    position: relative;
+
+    z-index: 3;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+
+.pillars-bottom-decoration span {
+
+    display: block;
+
+    width: 48px;
+
+    height: 1px;
+
+    background: rgba(182, 147, 62, 0.60);
+}
+
+
+.pillars-bottom-decoration i {
+
+    font-family: Georgia, serif;
+
+    font-style: normal;
+
+    font-size: 13px;
+
+    color: #b8943e;
+}
+
+
+/* =========================================================
+   DESKTOP
+   Cards remain compact instead of stretching vertically.
+========================================================= */
+
+@media (min-width: 768px) {
+
+    .guiding-pillars {
+
+        padding-top: 55px;
+        padding-bottom: 40px;
+    }
+
+
+    .pillars-heading {
+
+        margin-bottom: 32px;
+    }
+
+
+    .pillars-slider {
+
+        justify-content: center;
+
+        overflow-x: auto;
+
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL SCREEN
+   Only adjusts width — DOES NOT make the section full-screen.
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .guiding-pillars {
+
+        padding-top: 42px;
+
+        padding-bottom: 30px;
+    }
+
+
+    .pillars-heading {
+
+        margin-bottom: 25px;
+    }
+
+
+    .pillars-heading h2 {
+
+        font-size: 37px;
+    }
+
+
+    .pillars-heading p {
+
+        font-size: 16px;
+
+        padding: 0 10px;
+    }
+
+
+    .pillars-slider {
+
+        padding-left: 24px;
+
+        padding-right: 24px;
+
+        gap: 16px;
+    }
+
+
+    .pillar-card {
+
+        flex-basis: 280px;
+
+        width: 280px;
+
+        height: 420px;
+
+        min-height: 420px;
+
+        max-height: 420px;
+    }
+
+
+    .pillar-photo {
+
+        width: 180px;
+        height: 180px;
+
+        flex-basis: 180px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL SCREEN
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .pillars-heading h2 {
+
+        font-size: 34px;
+    }
+
+
+    .pillar-card {
+
+        flex-basis: 275px;
+
+        width: 275px;
+
+        height: 415px;
+
+        min-height: 415px;
+
+        max-height: 415px;
+    }
+
+
+    .pillar-photo {
+
+        width: 175px;
+        height: 175px;
+
+        flex-basis: 175px;
+    }
+
+}
+/* =========================================================
+   FIX MOBILE TAP / ACTIVE STATE
+   Keep the olive card visible while touching/swiping
+   ========================================================= */
+
+.pillar-card,
+.pillar-card:active,
+.pillar-card:focus,
+.pillar-card:focus-visible {
+    background:
+        linear-gradient(145deg,
+            #536b58 0%,
+            #435f4e 45%,
+            #365645 100%) !important;
+
+    color: #fff9ea !important;
+
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+}
+
+
+/* Keep all card content visible during tap */
+
+.pillar-card:active .pillar-info,
+.pillar-card:focus .pillar-info,
+.pillar-card:focus-visible .pillar-info {
+    color: #fff9ea !important;
+}
+
+
+.pillar-card:active .pillar-info h3,
+.pillar-card:focus .pillar-info h3,
+.pillar-card:focus-visible .pillar-info h3 {
+    color: #fff9ea !important;
+}
+
+
+.pillar-card:active .pillar-info p,
+.pillar-card:focus .pillar-info p,
+.pillar-card:focus-visible .pillar-info p {
+    color: rgba(248, 244, 229, 0.90) !important;
+}
+
+
+.pillar-card:active .pillar-role,
+.pillar-card:focus .pillar-role,
+.pillar-card:focus-visible .pillar-role {
+    color: #e3c975 !important;
+
+    background: rgba(198, 164, 75, 0.12) !important;
+}
+
+
+/* Prevent the browser from adding a white selection/tap effect */
+
+.pillar-card {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    user-select: none;
+}
+/* =========================================================
+   GUIDING PILLARS — GOLDEN TAP EFFECT
+   ========================================================= */
+
+/* Smooth interaction */
+.pillar-card {
+    position: relative;
+    -webkit-tap-highlight-color: transparent;
+    transform-origin: center;
+}
+
+
+/* ---------------------------------------------------------
+   TAP / TOUCH EFFECT
+--------------------------------------------------------- */
+
+.pillar-card:active {
+
+    transform: scale(0.97) translateY(-2px) !important;
+
+    background:
+        linear-gradient(145deg,
+            #596f5d 0%,
+            #47634f 45%,
+            #385846 100%) !important;
+
+    border-color: #d3b15d !important;
+
+    box-shadow:
+        0 8px 25px rgba(42, 67, 53, 0.28),
+        0 0 0 3px rgba(198, 164, 75, 0.12),
+        0 0 25px rgba(198, 164, 75, 0.16),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12) !important;
+}
+
+
+/* ---------------------------------------------------------
+   GOLDEN INNER BORDER
+--------------------------------------------------------- */
+
+.pillar-card:active::before {
+
+    width: 75px;
+
+    height: 5px;
+
+    background: #e0c16c;
+
+    box-shadow:
+        0 0 12px rgba(224, 193, 108, 0.75);
+
+    transition:
+        width 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* ---------------------------------------------------------
+   PHOTO TAP EFFECT
+--------------------------------------------------------- */
+
+.pillar-card:active .pillar-photo {
+
+    border-color: #d9bc69;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.28),
+        0 0 18px rgba(211, 177, 88, 0.22);
+
+    transform: scale(1.015);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+/* ---------------------------------------------------------
+   PHOTO LIGHT EFFECT
+--------------------------------------------------------- */
+
+.pillar-card:active .pillar-photo::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(120deg,
+            transparent 25%,
+            rgba(255, 255, 255, 0.18) 50%,
+            transparent 75%);
+
+    transform: translateX(-100%);
+
+    animation: pillarPhotoShine 0.7s ease forwards;
+
+    pointer-events: none;
+}
+
+
+@keyframes pillarPhotoShine {
+
+    to {
+        transform: translateX(100%);
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   NAME GENTLE HIGHLIGHT
+--------------------------------------------------------- */
+
+.pillar-card:active .pillar-info h3 {
+
+    text-shadow:
+        0 0 10px rgba(231, 207, 139, 0.18);
+
+    transition:
+        text-shadow 0.25s ease;
+}
+
+
+/* ---------------------------------------------------------
+   DESIGNATION GLOW
+--------------------------------------------------------- */
+
+.pillar-card:active .pillar-role {
+
+    border-color: #d7b75f;
+
+    background:
+        rgba(198, 164, 75, 0.16);
+
+    box-shadow:
+        0 0 12px rgba(198, 164, 75, 0.10);
+}
+
+
+/* ---------------------------------------------------------
+   STAR GLOW
+--------------------------------------------------------- */
+
+.pillar-card:active .pillar-divider {
+
+    color: #e3c66e;
+
+    text-shadow:
+        0 0 10px rgba(227, 198, 110, 0.65);
+
+    transform: scale(1.12);
+
+    transition:
+        transform 0.25s ease,
+        text-shadow 0.25s ease;
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE TOUCH BEHAVIOUR
+--------------------------------------------------------- */
+
+@media (hover: none) {
+
+    .pillar-card:active {
+
+        transition:
+            transform 0.15s ease,
+            box-shadow 0.15s ease;
+    }
+
+    .pillar-card:active .pillar-photo {
+
+        transition:
+            transform 0.15s ease,
+            box-shadow 0.15s ease;
+    }
+
+}
+
+/* =========================================================
+   OUR BCA FAMILY
+   Elegant • Compact • BCA • Heritage + Technology
+   ========================================================= */
+
+.bca-family {
+    position: relative;
+    width: 100%;
+    padding: 48px 0 38px;
+    overflow: hidden;
+
+    background:
+        linear-gradient(rgba(246, 243, 232, 0.97),
+            rgba(246, 243, 232, 0.97)),
+        repeating-linear-gradient(0deg,
+            transparent 0,
+            transparent 24px,
+            rgba(38, 75, 61, 0.05) 25px),
+        repeating-linear-gradient(90deg,
+            transparent 0,
+            transparent 24px,
+            rgba(38, 75, 61, 0.05) 25px);
+}
+
+
+/* ---------- Decorative circles ---------- */
+
+.bca-family::before {
+    content: "";
+    position: absolute;
+
+    width: 190px;
+    height: 190px;
+
+    top: -105px;
+    right: -95px;
+
+    border: 1px solid rgba(193, 154, 67, 0.25);
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+.bca-family::after {
+    content: "";
+    position: absolute;
+
+    width: 145px;
+    height: 145px;
+
+    bottom: -75px;
+    left: -75px;
+
+    border: 1px solid rgba(38, 75, 61, 0.14);
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.bca-family-header {
+    position: relative;
+    z-index: 2;
+
+    text-align: center;
+
+    padding: 0 22px;
+    margin-bottom: 28px;
+}
+
+
+.bca-family-label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+
+    color: #ad8739;
+}
+
+
+.bca-family-header h2 {
+    margin: 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 33px;
+    line-height: 1.15;
+    font-weight: 500;
+
+    color: #294d3f;
+}
+
+
+/* ---------- Header ornament ---------- */
+
+.bca-family-ornament {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    margin: 12px auto 10px;
+}
+
+
+.bca-family-ornament span {
+    width: 38px;
+    height: 1px;
+
+    background: #c5a052;
+}
+
+
+.bca-family-ornament i {
+    font-size: 14px;
+    font-style: normal;
+
+    color: #c29b48;
+}
+
+
+.bca-family-header p {
+    max-width: 310px;
+
+    margin: 0 auto;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 16px;
+    line-height: 1.45;
+    font-style: italic;
+
+    color: #68776f;
+}
+
+
+/* =========================================================
+   SWIPE AREA
+   ========================================================= */
+
+.bca-family-slider {
+    position: relative;
+    z-index: 3;
+
+    display: flex;
+
+    width: 100%;
+
+    gap: 17px;
+
+    padding: 7px 25px 22px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-snap-type: x mandatory;
+
+    -webkit-overflow-scrolling: touch;
+
+    scrollbar-width: none;
+}
+
+
+.bca-family-slider::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.bca-family-card {
+    position: relative;
+
+    flex: 0 0 278px;
+    width: 278px;
+
+    min-height: 410px;
+
+    padding: 18px 17px 23px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    scroll-snap-align: center;
+
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(145deg,
+            #526b56 0%,
+            #465f4c 48%,
+            #385645 100%);
+
+    border: 1px solid rgba(199, 164, 78, 0.82);
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 15px 30px rgba(31, 58, 46, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.09);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Gold top accent */
+
+.bca-family-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    width: 58px;
+    height: 5px;
+
+    transform: translateX(-50%);
+
+    background: #c9a550;
+
+    border-radius: 0 0 10px 10px;
+}
+
+
+/* Decorative glow */
+
+.bca-family-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 170px;
+    height: 170px;
+
+    top: -95px;
+    right: -85px;
+
+    background: rgba(220, 192, 113, 0.08);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   IMAGE
+   ========================================================= */
+
+.bca-family-image {
+    position: relative;
+    z-index: 2;
+
+    width: 188px;
+    height: 188px;
+
+    flex-shrink: 0;
+
+    margin: 0 auto 15px;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    border: 3px solid rgba(246, 240, 220, 0.92);
+
+    background: #d9d4c5;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+.bca-family-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform 0.4s ease;
+}
+
+
+/* =========================================================
+   BADGE
+   ========================================================= */
+
+.bca-family-badge {
+    position: relative;
+    z-index: 4;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 27px;
+
+    padding: 5px 14px;
+
+    margin-bottom: 10px;
+
+    border: 1px solid rgba(210, 174, 78, 0.78);
+
+    border-radius: 30px;
+
+    background: rgba(24, 48, 38, 0.35);
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+
+    color: #e4c979;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   NAME
+   ========================================================= */
+
+.bca-family-card h3 {
+    position: relative;
+    z-index: 4;
+
+    width: 100%;
+
+    margin: 0;
+
+    padding: 0 5px;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 20px;
+    line-height: 1.28;
+    font-weight: 600;
+
+    color: #fff9eb;
+
+    overflow-wrap: break-word;
+    word-break: normal;
+}
+
+
+/* =========================================================
+   GOLD STAR
+   ========================================================= */
+
+.bca-family-star {
+    position: relative;
+    z-index: 4;
+
+    margin: 8px auto 7px;
+
+    font-size: 13px;
+
+    color: #d2ac57;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   QUOTATION
+   ========================================================= */
+
+.bca-family-card p {
+    position: relative;
+    z-index: 4;
+
+    width: 100%;
+
+    margin: 0;
+
+    padding: 0 8px;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 15.5px;
+    line-height: 1.42;
+
+    font-style: italic;
+
+    color: rgba(249, 245, 232, 0.89);
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   TOUCH EFFECT
+   ========================================================= */
+
+.bca-family-card:active {
+    transform: scale(0.975) translateY(-2px);
+
+    border-color: #ddc174;
+
+    box-shadow:
+        0 9px 25px rgba(35, 61, 49, 0.25),
+        0 0 22px rgba(200, 165, 77, 0.14),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12);
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+.bca-family-card:active .bca-family-image img {
+    transform: scale(1.025);
+}
+
+
+.bca-family-card:active .bca-family-badge {
+    background: rgba(197, 158, 64, 0.14);
+
+    box-shadow:
+        0 0 12px rgba(205, 171, 78, 0.12);
+}
+
+
+/* =========================================================
+   SWIPE DOTS
+   ========================================================= */
+
+.bca-family-dots {
+    position: relative;
+    z-index: 4;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    margin-top: 0;
+}
+
+
+.bca-family-dots span {
+    display: block;
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #c9c6b1;
+
+    transition: all 0.3s ease;
+}
+
+
+.bca-family-dots span.active {
+    width: 31px;
+
+    border-radius: 20px;
+
+    background: #4b6651;
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .bca-family {
+        padding-top: 40px;
+        padding-bottom: 32px;
+    }
+
+    .bca-family-header h2 {
+        font-size: 30px;
+    }
+
+    .bca-family-slider {
+        padding-left: 20px;
+        padding-right: 20px;
+
+        gap: 15px;
+    }
+
+    .bca-family-card {
+        flex-basis: 270px;
+        width: 270px;
+
+        min-height: 400px;
+    }
+
+    .bca-family-image {
+        width: 180px;
+        height: 180px;
+    }
+
+    .bca-family-card h3 {
+        font-size: 19px;
+    }
+}
+
+
+/* =========================================================
+   BEYOND OUR DEPARTMENT
+   Elegant • Compact • Teacher's Day
+   ========================================================= */
+
+.beyond-department {
+    position: relative;
+
+    width: 100%;
+
+    padding: 45px 0 35px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(rgba(239, 235, 220, 0.97),
+            rgba(239, 235, 220, 0.97)),
+        repeating-linear-gradient(0deg,
+            transparent 0,
+            transparent 24px,
+            rgba(38, 75, 61, 0.045) 25px),
+        repeating-linear-gradient(90deg,
+            transparent 0,
+            transparent 24px,
+            rgba(38, 75, 61, 0.045) 25px);
+}
+
+
+/* ---------- Decorative circles ---------- */
+
+.beyond-department::before {
+    content: "";
+
+    position: absolute;
+
+    width: 170px;
+    height: 170px;
+
+    top: -95px;
+    left: -85px;
+
+    border: 1px solid rgba(193, 154, 67, 0.22);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+.beyond-department::after {
+    content: "";
+
+    position: absolute;
+
+    width: 125px;
+    height: 125px;
+
+    bottom: -65px;
+    right: -65px;
+
+    border: 1px solid rgba(38, 75, 61, 0.12);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.beyond-header {
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+
+    padding: 0 22px;
+
+    margin-bottom: 27px;
+}
+
+
+.beyond-label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    color: #ad8739;
+}
+
+
+.beyond-header h2 {
+    margin: 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 31px;
+
+    line-height: 1.15;
+
+    font-weight: 500;
+
+    color: #294d3f;
+}
+
+
+/* ---------- Ornament ---------- */
+
+.beyond-ornament {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin: 12px auto 9px;
+}
+
+
+.beyond-ornament span {
+    width: 36px;
+
+    height: 1px;
+
+    background: #c5a052;
+}
+
+
+.beyond-ornament i {
+    font-size: 13px;
+
+    font-style: normal;
+
+    color: #c29b48;
+}
+
+
+.beyond-header p {
+    max-width: 310px;
+
+    margin: 0 auto;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 15.5px;
+
+    line-height: 1.45;
+
+    font-style: italic;
+
+    color: #68776f;
+}
+
+
+/* =========================================================
+   SWIPE AREA
+   ========================================================= */
+
+.beyond-slider {
+    position: relative;
+
+    z-index: 3;
+
+    display: flex;
+
+    width: 100%;
+
+    gap: 17px;
+
+    padding: 7px 25px 21px;
+
+    overflow-x: auto;
+
+    overflow-y: hidden;
+
+    scroll-snap-type: x mandatory;
+
+    -webkit-overflow-scrolling: touch;
+
+    scrollbar-width: none;
+}
+
+
+.beyond-slider::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.beyond-card {
+    position: relative;
+
+    flex: 0 0 278px;
+
+    width: 278px;
+
+    min-height: 395px;
+
+    padding: 18px 17px 22px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    scroll-snap-align: center;
+
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(145deg,
+            #65785d 0%,
+            #536a55 50%,
+            #435a49 100%);
+
+    border: 1px solid rgba(199, 164, 78, 0.78);
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 14px 28px rgba(31, 58, 46, 0.16),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Gold top line */
+
+.beyond-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    width: 55px;
+    height: 5px;
+
+    transform: translateX(-50%);
+
+    background: #c9a550;
+
+    border-radius: 0 0 10px 10px;
+}
+
+
+/* Soft decorative glow */
+
+.beyond-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 160px;
+    height: 160px;
+
+    top: -90px;
+    right: -80px;
+
+    background: rgba(220, 192, 113, 0.07);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   IMAGE
+   ========================================================= */
+
+.beyond-image {
+    position: relative;
+
+    z-index: 2;
+
+    width: 188px;
+    height: 188px;
+
+    flex-shrink: 0;
+
+    margin: 0 auto 14px;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    border: 3px solid rgba(246, 240, 220, 0.92);
+
+    background: #d9d4c5;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.23);
+}
+
+
+.beyond-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transition: transform 0.4s ease;
+}
+
+
+/* =========================================================
+   BADGE
+   ========================================================= */
+
+.beyond-badge {
+    position: relative;
+
+    z-index: 4;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 26px;
+
+    padding: 5px 13px;
+
+    margin-bottom: 9px;
+
+    border: 1px solid rgba(210, 174, 78, 0.75);
+
+    border-radius: 30px;
+
+    background: rgba(24, 48, 38, 0.32);
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.6px;
+
+    color: #e4c979;
+}
+
+
+/* =========================================================
+   NAME
+   ========================================================= */
+
+.beyond-card h3 {
+    position: relative;
+
+    z-index: 4;
+
+    width: 100%;
+
+    margin: 0;
+
+    padding: 0 5px;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 20px;
+
+    line-height: 1.28;
+
+    font-weight: 600;
+
+    color: #fff9eb;
+
+    overflow-wrap: break-word;
+}
+
+
+/* =========================================================
+   STAR
+   ========================================================= */
+
+.beyond-star {
+    position: relative;
+
+    z-index: 4;
+
+    margin: 8px auto 7px;
+
+    font-size: 13px;
+
+    line-height: 1;
+
+    color: #d2ac57;
+}
+
+
+/* =========================================================
+   QUOTATION
+   ========================================================= */
+
+.beyond-card p {
+    position: relative;
+
+    z-index: 4;
+
+    width: 100%;
+
+    margin: 0;
+
+    padding: 0 8px;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 15.5px;
+
+    line-height: 1.42;
+
+    font-style: italic;
+
+    color: rgba(249, 245, 232, 0.9);
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   TAP EFFECT
+   ========================================================= */
+
+.beyond-card:active {
+    transform: scale(0.975) translateY(-2px);
+
+    border-color: #ddc174;
+
+    box-shadow:
+        0 9px 24px rgba(35, 61, 49, 0.23),
+        0 0 20px rgba(200, 165, 77, 0.13);
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+.beyond-card:active .beyond-image img {
+    transform: scale(1.025);
+}
+
+
+/* =========================================================
+   SWIPE DOTS
+   ========================================================= */
+
+.beyond-dots {
+    position: relative;
+
+    z-index: 4;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+}
+
+
+.beyond-dots span {
+    display: block;
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #c9c6b1;
+
+    transition: all 0.3s ease;
+}
+
+
+.beyond-dots span.active {
+    width: 31px;
+
+    border-radius: 20px;
+
+    background: #4b6651;
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .beyond-department {
+        padding-top: 40px;
+        padding-bottom: 30px;
+    }
+
+    .beyond-header h2 {
+        font-size: 29px;
+    }
+
+    .beyond-slider {
+        padding-left: 20px;
+        padding-right: 20px;
+
+        gap: 15px;
+    }
+
+    .beyond-card {
+        flex-basis: 270px;
+
+        width: 270px;
+
+        min-height: 390px;
+    }
+
+    .beyond-image {
+        width: 180px;
+        height: 180px;
+    }
+
+    .beyond-card h3 {
+        font-size: 19px;
+    }
+}
+
+/* =========================================================
+   LESSONS THAT STAY
+   Elegant • Minimal • BCA Tech + Heritage
+   ========================================================= */
+
+.lessons-stay {
+    position: relative;
+
+    width: 100%;
+
+    padding: 48px 20px 38px;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(rgba(244, 241, 228, 0.97),
+            rgba(244, 241, 228, 0.97)),
+        repeating-linear-gradient(0deg,
+            transparent 0,
+            transparent 24px,
+            rgba(38, 75, 61, 0.045) 25px),
+        repeating-linear-gradient(90deg,
+            transparent 0,
+            transparent 24px,
+            rgba(38, 75, 61, 0.045) 25px);
+}
+
+
+/* =========================================================
+   DECORATIVE BACKGROUND
+   ========================================================= */
+
+.lessons-stay::before {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    top: -100px;
+    right: -90px;
+
+    border: 1px solid rgba(194, 157, 68, 0.22);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+.lessons-stay::after {
+    content: "";
+
+    position: absolute;
+
+    width: 140px;
+    height: 140px;
+
+    bottom: -80px;
+    left: -70px;
+
+    border: 1px solid rgba(38, 75, 61, 0.12);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.lessons-header {
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+
+.lessons-label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    color: #ae883d;
+}
+
+
+.lessons-header h2 {
+    margin: 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 31px;
+
+    line-height: 1.15;
+
+    font-weight: 500;
+
+    color: #294d3f;
+}
+
+
+/* =========================================================
+   ORNAMENT
+   ========================================================= */
+
+.lessons-ornament {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin: 12px auto 10px;
+}
+
+
+.lessons-ornament span {
+    width: 38px;
+
+    height: 1px;
+
+    background: #c5a052;
+}
+
+
+.lessons-ornament i {
+    font-size: 13px;
+
+    font-style: normal;
+
+    color: #c5a052;
+}
+
+
+.lessons-header p {
+    max-width: 310px;
+
+    margin: 0 auto;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 16px;
+
+    line-height: 1.45;
+
+    font-style: italic;
+
+    color: #68766e;
+}
+
+
+/* =========================================================
+   LESSON LIST
+   ========================================================= */
+
+.lessons-list {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 520px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+
+/* =========================================================
+   LESSON ITEM
+   ========================================================= */
+
+.lesson-item {
+    position: relative;
+
+    display: flex;
+
+    align-items: stretch;
+
+    min-height: 100px;
+
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(135deg,
+            #f8f5e9,
+            #eeeade);
+
+    border: 1px solid rgba(181, 148, 68, 0.35);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 20px rgba(45, 68, 57, 0.08);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+/* =========================================================
+   NUMBER
+   ========================================================= */
+
+.lesson-number {
+    flex: 0 0 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(160deg,
+            #536b57,
+            #405b4b);
+
+    border-right: 1px solid rgba(196, 158, 66, 0.45);
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color: #dfc477;
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.lesson-content {
+    flex: 1;
+
+    padding: 15px 16px 14px;
+
+    box-sizing: border-box;
+}
+
+
+.lesson-code {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 7.5px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.1px;
+
+    color: #a8853c;
+
+    opacity: 0.9;
+}
+
+
+.lesson-content h3 {
+    margin: 0 0 4px;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 19px;
+
+    line-height: 1.2;
+
+    font-weight: 600;
+
+    color: #315443;
+}
+
+
+.lesson-content p {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 14.5px;
+
+    line-height: 1.35;
+
+    color: #647069;
+}
+
+
+/* =========================================================
+   HOVER / TAP EFFECT
+   ========================================================= */
+
+.lesson-item:hover {
+    transform: translateY(-2px);
+
+    border-color: rgba(181, 148, 68, 0.6);
+
+    box-shadow:
+        0 12px 25px rgba(45, 68, 57, 0.12);
+}
+
+
+.lesson-item:active {
+    transform: scale(0.985);
+
+    box-shadow:
+        0 6px 15px rgba(45, 68, 57, 0.12);
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   BOTTOM ORNAMENT
+   ========================================================= */
+
+.lessons-bottom {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 24px;
+}
+
+
+.lessons-bottom span {
+    width: 48px;
+
+    height: 1px;
+
+    background: #c5a052;
+}
+
+
+.lessons-bottom i {
+    font-family: Georgia, serif;
+
+    font-size: 17px;
+
+    font-style: normal;
+
+    color: #49624f;
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .lessons-stay {
+        padding: 42px 16px 32px;
+    }
+
+    .lessons-header h2 {
+        font-size: 29px;
+    }
+
+    .lessons-header p {
+        font-size: 15px;
+    }
+
+    .lesson-number {
+        flex-basis: 52px;
+
+        font-size: 10px;
+    }
+
+    .lesson-content {
+        padding: 14px 13px;
+    }
+
+    .lesson-content h3 {
+        font-size: 18px;
+    }
+
+    .lesson-content p {
+        font-size: 14px;
+    }
+}
+
+/* =========================================================
+   TEACHER QUOTES
+   Elegant • Minimal • BCA Theme
+   ========================================================= */
+
+.teacher-quotes {
+    position: relative;
+
+    width: 100%;
+
+    padding: 48px 0 35px;
+
+    overflow: hidden;
+
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(rgba(232, 237, 225, 0.97),
+            rgba(232, 237, 225, 0.97)),
+        repeating-linear-gradient(0deg,
+            transparent 0,
+            transparent 24px,
+            rgba(38, 75, 61, 0.045) 25px),
+        repeating-linear-gradient(90deg,
+            transparent 0,
+            transparent 24px,
+            rgba(38, 75, 61, 0.045) 25px);
+}
+
+
+/* Decorative circles */
+
+.teacher-quotes::before {
+    content: "";
+
+    position: absolute;
+
+    width: 170px;
+    height: 170px;
+
+    top: -90px;
+    left: -85px;
+
+    border: 1px solid rgba(194, 157, 68, 0.2);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+.teacher-quotes::after {
+    content: "";
+
+    position: absolute;
+
+    width: 130px;
+    height: 130px;
+
+    bottom: -70px;
+    right: -65px;
+
+    border: 1px solid rgba(38, 75, 61, 0.12);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.quotes-header {
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+
+    padding: 0 20px;
+
+    margin-bottom: 27px;
+}
+
+
+.quotes-label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    color: #ad8739;
+}
+
+
+.quotes-header h2 {
+    margin: 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 31px;
+
+    line-height: 1.15;
+
+    font-weight: 500;
+
+    color: #294d3f;
+}
+
+
+.quotes-ornament {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin: 12px auto 9px;
+}
+
+
+.quotes-ornament span {
+    width: 38px;
+
+    height: 1px;
+
+    background: #c5a052;
+}
+
+
+.quotes-ornament i {
+    font-size: 13px;
+
+    font-style: normal;
+
+    color: #c5a052;
+}
+
+
+.quotes-header p {
+    max-width: 310px;
+
+    margin: 0 auto;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 16px;
+
+    line-height: 1.45;
+
+    font-style: italic;
+
+    color: #68766e;
+}
+
+
+/* =========================================================
+   QUOTE SWIPE
+   ========================================================= */
+
+.quotes-slider {
+    position: relative;
+
+    z-index: 3;
+
+    display: flex;
+
+    gap: 16px;
+
+    width: 100%;
+
+    padding: 6px 25px 20px;
+
+    box-sizing: border-box;
+
+    overflow-x: auto;
+
+    overflow-y: hidden;
+
+    scroll-snap-type: x mandatory;
+
+    -webkit-overflow-scrolling: touch;
+
+    scrollbar-width: none;
+}
+
+
+.quotes-slider::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* =========================================================
+   QUOTE CARD
+   ========================================================= */
+
+.quote-card {
+    position: relative;
+
+    flex: 0 0 285px;
+
+    width: 285px;
+
+    min-height: 185px;
+
+    padding: 30px 25px 23px;
+
+    box-sizing: border-box;
+
+    scroll-snap-align: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(145deg,
+            #536b57,
+            #405b4b);
+
+    border: 1px solid rgba(201, 165, 77, 0.7);
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 12px 27px rgba(35, 61, 49, 0.15);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Gold top accent */
+
+.quote-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    width: 48px;
+    height: 4px;
+
+    transform: translateX(-50%);
+
+    background: #c9a550;
+
+    border-radius: 0 0 8px 8px;
+}
+
+
+/* Soft glow */
+
+.quote-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    top: -90px;
+    right: -70px;
+
+    background: rgba(220, 192, 113, 0.07);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   QUOTE MARK
+   ========================================================= */
+
+.quote-mark {
+    position: absolute;
+
+    top: 13px;
+    left: 20px;
+
+    font-family: Georgia, serif;
+
+    font-size: 42px;
+
+    line-height: 1;
+
+    color: #d4b362;
+
+    opacity: 0.75;
+}
+
+
+/* =========================================================
+   QUOTE TEXT
+   ========================================================= */
+
+.quote-card p {
+    position: relative;
+
+    z-index: 2;
+
+    margin: 0;
+
+    max-width: 235px;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 18px;
+
+    line-height: 1.42;
+
+    font-style: italic;
+
+    color: #faf5e8;
+}
+
+
+/* Bottom line */
+
+.quote-line {
+    position: relative;
+
+    z-index: 2;
+
+    width: 42px;
+
+    height: 1px;
+
+    margin-top: 17px;
+
+    background: #c9a550;
+}
+
+
+/* =========================================================
+   TAP EFFECT
+   ========================================================= */
+
+.quote-card:active {
+    transform: scale(0.975);
+
+    box-shadow:
+        0 7px 18px rgba(35, 61, 49, 0.18);
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   DOTS
+   ========================================================= */
+
+.quotes-dots {
+    position: relative;
+
+    z-index: 4;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+}
+
+
+.quotes-dots span {
+    display: block;
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #c9c6b1;
+
+    transition: all 0.3s ease;
+}
+
+
+.quotes-dots span.active {
+    width: 31px;
+
+    border-radius: 20px;
+
+    background: #4b6651;
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .teacher-quotes {
+        padding-top: 42px;
+        padding-bottom: 30px;
+    }
+
+    .quotes-header h2 {
+        font-size: 29px;
+    }
+
+    .quotes-slider {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .quote-card {
+        flex-basis: 270px;
+
+        width: 270px;
+
+        min-height: 180px;
+
+        padding-left: 21px;
+
+        padding-right: 21px;
+    }
+
+    .quote-card p {
+        font-size: 17px;
+    }
+}
+/* =========================================================
+   WISH FROM THE WHOLE BCA DEPARTMENT
+   Elegant • Academic • BCA • Teacher's Day
+   ========================================================= */
+
+.bca-wish-section {
+    position: relative;
+    width: 100%;
+    padding: 70px 20px 65px;
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(rgba(243, 239, 224, 0.96),
+            rgba(243, 239, 224, 0.96)),
+        repeating-linear-gradient(0deg,
+            transparent 0,
+            transparent 24px,
+            rgba(52, 78, 63, 0.045) 25px),
+        repeating-linear-gradient(90deg,
+            transparent 0,
+            transparent 24px,
+            rgba(52, 78, 63, 0.045) 25px);
+
+    overflow: hidden;
+}
+
+
+/* ---------- Decorative circles ---------- */
+
+.bca-wish-section::before {
+    content: "";
+    position: absolute;
+
+    width: 210px;
+    height: 210px;
+
+    top: -115px;
+    right: -105px;
+
+    border: 1px solid rgba(181, 145, 62, 0.28);
+    border-radius: 50%;
+}
+
+.bca-wish-section::after {
+    content: "";
+    position: absolute;
+
+    width: 160px;
+    height: 160px;
+
+    bottom: -90px;
+    left: -80px;
+
+    border: 1px solid rgba(52, 78, 63, 0.13);
+    border-radius: 50%;
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.bca-wish-container {
+    position: relative;
+    z-index: 2;
+
+    width: min(100%, 760px);
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.bca-wish-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.bca-wish-label {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+
+    color: #a98338;
+}
+
+
+.bca-wish-heading h2 {
+    margin: 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: clamp(30px, 6vw, 43px);
+    line-height: 1.12;
+    font-weight: 500;
+
+    color: #294d3e;
+}
+
+
+.bca-wish-heading h2 span {
+    font-style: italic;
+    color: #76542e;
+}
+
+
+.bca-wish-ornament {
+    margin-top: 13px;
+
+    font-size: 16px;
+
+    color: #bd9642;
+}
+
+
+/* =========================================================
+   MAIN WISH CARD
+   ========================================================= */
+
+.bca-wish-card {
+    position: relative;
+
+    width: 100%;
+
+    padding: 38px 42px 34px;
+
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(145deg,
+            #405f4c 0%,
+            #344f41 52%,
+            #2d473a 100%);
+
+    border: 1px solid rgba(194, 157, 69, 0.75);
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 18px 45px rgba(35, 55, 45, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+    overflow: hidden;
+
+    text-align: center;
+}
+
+
+/* ---------- Inner gold border ---------- */
+
+.bca-wish-card::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 9px;
+
+    border: 1px solid rgba(210, 177, 93, 0.22);
+
+    border-radius: 21px;
+
+    pointer-events: none;
+}
+
+
+/* ---------- Soft decorative glow ---------- */
+
+.bca-wish-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 230px;
+    height: 230px;
+
+    top: -130px;
+    right: -100px;
+
+    background: rgba(215, 184, 101, 0.07);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   QUOTATION SYMBOL
+   ========================================================= */
+
+.bca-wish-top {
+    position: relative;
+    z-index: 2;
+
+    height: 38px;
+}
+
+
+.wish-symbol {
+    font-family: Georgia, serif;
+
+    font-size: 58px;
+    line-height: 1;
+
+    color: #d1ae5b;
+
+    opacity: 0.85;
+}
+
+
+/* =========================================================
+   MESSAGE
+   ========================================================= */
+
+.bca-wish-message {
+    position: relative;
+    z-index: 2;
+
+    max-width: 620px;
+
+    margin: 8px auto 22px;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: clamp(18px, 3vw, 22px);
+
+    line-height: 1.55;
+
+    font-style: italic;
+
+    color: #f6f1df;
+}
+
+
+/* =========================================================
+   BCA CODE LINE
+   ========================================================= */
+
+.bca-code-line {
+    position: relative;
+    z-index: 2;
+
+    margin: 0 auto 23px;
+
+    font-family: "Courier New", monospace;
+
+    font-size: 12px;
+
+    letter-spacing: 0.4px;
+
+    color: #d5bd78;
+
+    opacity: 0.95;
+}
+
+
+/* =========================================================
+   DIVIDER
+   ========================================================= */
+
+.bca-wish-divider {
+    position: relative;
+    z-index: 2;
+
+    width: 110px;
+    height: 1px;
+
+    margin: 0 auto 21px;
+
+    background: linear-gradient(to right,
+            transparent,
+            #c8a451,
+            transparent);
+}
+
+
+/* =========================================================
+   ENDING
+   ========================================================= */
+
+.bca-wish-ending {
+    position: relative;
+    z-index: 2;
+
+    margin: 0;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 17px;
+    line-height: 1.5;
+
+    color: rgba(246, 241, 223, 0.82);
+}
+
+
+.bca-wish-ending strong {
+    display: inline-block;
+
+    margin-top: 3px;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 19px;
+
+    font-weight: 600;
+
+    color: #e0c477;
+}
+
+
+/* =========================================================
+   BOTTOM ORNAMENT
+   ========================================================= */
+
+.bca-wish-bottom {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 24px;
+
+    font-size: 10px;
+
+    color: #c9a453;
+}
+
+.bca-wish-bottom span:nth-child(2) {
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   TABLET / DESKTOP
+   ========================================================= */
+
+@media (min-width: 768px) {
+
+    .bca-wish-section {
+        padding: 80px 30px 75px;
+    }
+
+    .bca-wish-card {
+        padding: 45px 70px 40px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .bca-wish-section {
+        padding: 50px 16px 45px;
+    }
+
+    .bca-wish-heading {
+        margin-bottom: 24px;
+    }
+
+    .bca-wish-label {
+        font-size: 9px;
+        letter-spacing: 3px;
+    }
+
+    .bca-wish-heading h2 {
+        font-size: 30px;
+    }
+
+    .bca-wish-card {
+        padding: 31px 24px 29px;
+        border-radius: 23px;
+    }
+
+    .bca-wish-message {
+        font-size: 17px;
+        line-height: 1.5;
+    }
+
+    .bca-code-line {
+        font-size: 10px;
+        line-height: 1.5;
+    }
+
+    .bca-wish-ending {
+        font-size: 16px;
+    }
+
+    .bca-wish-ending strong {
+        font-size: 18px;
+    }
+}
+
+
+/* =========================================================
+   CLICKABLE SWIPE DOTS
+   ========================================================= */
+
+.bca-family-dots span,
+.beyond-dots span {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition:
+        width 0.3s ease,
+        background 0.3s ease,
+        transform 0.2s ease;
+}
+
+.bca-family-dots span:active,
+.beyond-dots span:active {
+    transform: scale(0.9);
+}
+
+
+
+
+
+
+
+
+/* =========================================================
+   GUIDING PILLARS DOT FIX
+   ========================================================= */
+
+.pillar-dots {
+    position: relative;
+    z-index: 20;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    margin-top: 6px;
+
+    pointer-events: auto;
+}
+
+
+/* Individual dots */
+
+.pillar-dots span {
+    position: relative;
+
+    display: block;
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: #b9bba9;
+
+    cursor: pointer;
+
+    pointer-events: auto;
+
+    transition:
+        width 0.3s ease,
+        background-color 0.3s ease,
+        transform 0.2s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Active dot */
+
+.pillar-dots span.active {
+    width: 30px;
+
+    border-radius: 20px;
+
+    background: #b89643;
+
+    box-shadow:
+        0 2px 8px rgba(184, 150, 67, 0.25);
+}
+
+
+/* Tap effect */
+
+.pillar-dots span:active {
+    transform: scale(0.85);
+}
+
+
+/* =========================================================
+   TAP TO CONTINUE FIX
+   ========================================================= */
+
+.continue-button {
+    position: relative;
+
+    z-index: 20;
+
+    cursor: pointer;
+
+    pointer-events: auto;
+
+    border: none;
+
+    outline: none;
+
+    -webkit-tap-highlight-color: transparent;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.continue-button:hover {
+    transform: translateY(-2px);
+}
+
+
+.continue-button:active {
+    transform: scale(0.96);
+}
+
